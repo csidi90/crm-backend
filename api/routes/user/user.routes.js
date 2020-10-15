@@ -44,9 +44,9 @@ router.post('/me/logout', auth, async (req, res) => {
       return token.token != req.token
     })
     await req.user.save()
-    res.send()
+    res.json()
   } catch (error) {
-    res.status(500).send(error)
+    res.status(500).json(error)
   }
 })
 
@@ -55,9 +55,9 @@ router.post('/me/logoutall', auth, async (req, res) => {
   try {
     req.user.tokens.splice(0, req.user.tokens.length)
     await req.user.save()
-    res.send()
+    res.json()
   } catch (error) {
-    res.status(500).send(error)
+    res.status(500).json(error)
   }
 })
 
