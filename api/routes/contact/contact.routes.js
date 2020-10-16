@@ -28,7 +28,7 @@ router.post('/', auth, async (req, res) => {
 		await contact.save();
 		res.status(200).json(contact);
 	} catch (error) {
-		res.status(400).json(eror);
+		res.status(400).json(error);
 	}
 });
 module.exports = router;

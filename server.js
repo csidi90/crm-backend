@@ -27,4 +27,4 @@ connectDB()
 	.catch((error) => console.log(error));
 
 server.use('/users', userRouter);
-server.use('contacts', contactRouter);
+server.use('/contacts', contactRouter);
